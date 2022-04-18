@@ -21,11 +21,17 @@ int main(int argument_count, char** argument_array)
 		return -1;
 	}
 
+	std::string inputName = argument_array[1];
+	std::size_t found = inputName.find(".");
+
+	std::string outputString = inputName.substr(0, found);
+	outputString.append(".bin");
+
 	std::ifstream file_buffer_str(argument_array[1], std::ios::binary);
 	std::vector<std::uint8_t>file_buffer(std::istreambuf_iterator<char>(file_buffer_str), {});
 
 	std::ofstream myfile;
-	myfile.open("output");
+	myfile.open(outputString);
 
 	int test = 1;
 
