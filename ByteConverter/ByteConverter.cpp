@@ -17,7 +17,7 @@ int main(int argument_count, char** argument_array)
 
 	if (std::filesystem::exists(argument_array[1]) == false)
 	{
-		printf("[-] driver [%s] does not exist", argument_array[1]);
+		printf("[-] file [%s] does not exist", argument_array[1]);
 		return -1;
 	}
 
