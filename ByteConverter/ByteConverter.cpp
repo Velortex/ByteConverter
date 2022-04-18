@@ -40,7 +40,7 @@ int main(int argument_count, char** argument_array)
 		std::stringstream ss;
 		ss << std::hex;
 		ss << std::setw(2) << std::setfill('0') << (int)file_buffer.data()[i];
-		
+
 		char finalstr[2] = "";
 
 		for (int i = 0; i < 2; i++) {
@@ -51,14 +51,18 @@ int main(int argument_count, char** argument_array)
 
 		myfile << "0x";
 		myfile << finalstr;
-		myfile << ", ";
 
 		if (test == 16) {
+			myfile << ",";
 			myfile << "\n";
 			test = 1;
 		}
 		else
+		{
+			if (i < file_buffer.size() - 1)
+				myfile << ", ";
 			test++;
+		}
 	}
 	myfile.close();
 
