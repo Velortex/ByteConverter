@@ -3,26 +3,10 @@
 
 #include <iostream>
 #include <windows.h>
-#include <string_view>
-#include <vector>
-#include <thread>
-#include <atomic>
-#include <mutex>
-#include <functional>
-#include <cstdint>
-#include <iterator>
-#include <map>
 #include <fstream>
 #include <string>
 #include <vector>
-#include <tlhelp32.h>
-#include <array>
-#include <algorithm>
-#include <atomic>
 #include <filesystem>
-#include <Windows.h>
-#include <Winternl.h>
-#include <ntstatus.h>
 
 
 int main(int argument_count, char** argument_array)
